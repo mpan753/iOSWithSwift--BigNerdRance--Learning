@@ -14,6 +14,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var textField: UITextField!
     
+    // MARK: - Setter && Getter
     var fahrenheitValue : Double? {
         didSet {
             updateCelsiusLabel()
@@ -35,6 +36,8 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         nf.maximumFractionDigits = 2
         return nf
     }()
+
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,12 +50,22 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Silver Challenge: Dark Mode -- Chapter 5
+        let date = NSDate()
+        let red = CGFloat(drand48())
+        let green = CGFloat(drand48())
+        let blue = CGFloat(drand48())
+        view.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+        print(date.descriptionWithLocale(NSLocale.currentLocale()))
+    }
+    
+    // MARK: - Actions
+    
     @IBAction func fahrenheitFieldEditingChanged(textField: UITextField) {
-//        if let text = textField.text where !text.isEmpty {
-//            celsiusLabel.text = text
-//        } else {
-//            celsiusLabel.text = "???"
-//        }
+
         if let text = textField.text, value = Double(text) {
             fahrenheitValue = value
         } else {
@@ -83,7 +96,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
             return false
         }
         
-//        Bronze Challenge
+//        Bronze Challenge chapter 4
         let alpha = NSCharacterSet.letterCharacterSet()
 
         let replacementTextStringList = string.componentsSeparatedByCharactersInSet(alpha)
