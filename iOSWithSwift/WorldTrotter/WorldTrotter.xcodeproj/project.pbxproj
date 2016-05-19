@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D5E929E1CED7E9C005165EC /* BigNerdRanchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5E929D1CED7E9C005165EC /* BigNerdRanchViewController.swift */; };
 		0D9C57C41CEB1B1000A458CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9C57C31CEB1B1000A458CF /* AppDelegate.swift */; };
 		0D9C57C91CEB1B1000A458CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D9C57C71CEB1B1000A458CF /* Main.storyboard */; };
 		0D9C57CB1CEB1B1000A458CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D9C57CA1CEB1B1000A458CF /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D5E929D1CED7E9C005165EC /* BigNerdRanchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigNerdRanchViewController.swift; sourceTree = "<group>"; };
 		0D9C57C01CEB1B1000A458CF /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D9C57C31CEB1B1000A458CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D9C57C81CEB1B1000A458CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				0D9C57C31CEB1B1000A458CF /* AppDelegate.swift */,
 				0D9C57D51CEB226700A458CF /* ConversionViewController.swift */,
 				0DA85B9B1CED54C1007639DF /* MapViewController.swift */,
+				0D5E929D1CED7E9C005165EC /* BigNerdRanchViewController.swift */,
 				0D9C57C71CEB1B1000A458CF /* Main.storyboard */,
 				0D9C57CA1CEB1B1000A458CF /* Assets.xcassets */,
 				0D9C57CC1CEB1B1000A458CF /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 			files = (
 				0D9C57D61CEB226700A458CF /* ConversionViewController.swift in Sources */,
 				0DA85B9C1CED54C1007639DF /* MapViewController.swift in Sources */,
+				0D5E929E1CED7E9C005165EC /* BigNerdRanchViewController.swift in Sources */,
 				0D9C57C41CEB1B1000A458CF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

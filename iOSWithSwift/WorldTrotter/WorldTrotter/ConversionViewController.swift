@@ -54,12 +54,12 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         super.viewWillAppear(animated)
         
         // Silver Challenge: Dark Mode -- Chapter 5
-        let date = NSDate()
-        let red = CGFloat(drand48())
-        let green = CGFloat(drand48())
-        let blue = CGFloat(drand48())
-        view.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
-        print(date.descriptionWithLocale(NSLocale.currentLocale()))
+//        let date = NSDate()
+//        let red = CGFloat(drand48())
+//        let green = CGFloat(drand48())
+//        let blue = CGFloat(drand48())
+//        view.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+//        print(date.descriptionWithLocale(NSLocale.currentLocale()))
     }
     
     // MARK: - Actions
