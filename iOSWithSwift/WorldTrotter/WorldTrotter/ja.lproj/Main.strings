@@ -1,0 +1,24 @@
+
+/* Class = "UITextField"; placeholder = "Value"; ObjectID = "AaB-LD-T7b"; */
+"AaB-LD-T7b.placeholder" = "値";
+
+/* Class = "UILabel"; text = "degrees Fahrenheit"; ObjectID = "aYE-tb-Lr3"; */
+"aYE-tb-Lr3.text" = "華氏温度";
+
+/* Class = "UILabel"; text = "degrees Celsius"; ObjectID = "eLC-q9-2l9"; */
+"eLC-q9-2l9.text" = "摂氏温度";
+
+/* Class = "UITabBarItem"; title = "BigNerdRanch"; ObjectID = "f4y-93-8aj"; */
+"f4y-93-8aj.title" = "BigNerdRanch";
+
+/* Class = "UITabBarItem"; title = "ConvertIcon"; ObjectID = "fsO-Ae-RzI"; */
+"fsO-Ae-RzI.title" = "改宗者";
+
+/* Class = "UILabel"; text = "???"; ObjectID = "fyi-4l-KHE"; */
+"fyi-4l-KHE.text" = "???";
+
+/* Class = "UITabBarItem"; title = "Map"; ObjectID = "kju-cc-vRM"; */
+"kju-cc-vRM.title" = "マップ";
+
+/* Class = "UILabel"; text = "is really"; ObjectID = "ppe-lU-AMb"; */
+"ppe-lU-AMb.text" = "実際にある";

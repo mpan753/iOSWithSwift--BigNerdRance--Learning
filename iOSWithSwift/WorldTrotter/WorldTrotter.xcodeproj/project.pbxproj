@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D42FE431CF568D600D7AF2E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D42FE451CF568D600D7AF2E /* Localizable.strings */; };
 		0D5E929E1CED7E9C005165EC /* BigNerdRanchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5E929D1CED7E9C005165EC /* BigNerdRanchViewController.swift */; };
 		0D9C57C41CEB1B1000A458CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9C57C31CEB1B1000A458CF /* AppDelegate.swift */; };
 		0D9C57C91CEB1B1000A458CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D9C57C71CEB1B1000A458CF /* Main.storyboard */; };
@@ -18,6 +19,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D42FE3C1CF551A100D7AF2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		0D42FE3F1CF552B300D7AF2E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		0D42FE401CF552B300D7AF2E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		0D42FE441CF568D600D7AF2E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0D42FE461CF568F100D7AF2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0D42FE471CF56CEF00D7AF2E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		0D42FE481CF56CEF00D7AF2E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0D5E929D1CED7E9C005165EC /* BigNerdRanchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigNerdRanchViewController.swift; sourceTree = "<group>"; };
 		0D9C57C01CEB1B1000A458CF /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D9C57C31CEB1B1000A458CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +74,7 @@
 				0D9C57D51CEB226700A458CF /* ConversionViewController.swift */,
 				0DA85B9B1CED54C1007639DF /* MapViewController.swift */,
 				0D5E929D1CED7E9C005165EC /* BigNerdRanchViewController.swift */,
+				0D42FE451CF568D600D7AF2E /* Localizable.strings */,
 				0D9C57C71CEB1B1000A458CF /* Main.storyboard */,
 				0D9C57CA1CEB1B1000A458CF /* Assets.xcassets */,
 				0D9C57CC1CEB1B1000A458CF /* LaunchScreen.storyboard */,
@@ -116,6 +125,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 0D9C57B71CEB1B0F00A458CF;
 			productRefGroup = 0D9C57C11CEB1B1000A458CF /* Products */;
@@ -133,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D9C57CE1CEB1B1000A458CF /* LaunchScreen.storyboard in Resources */,
+				0D42FE431CF568D600D7AF2E /* Localizable.strings in Resources */,
 				0D9C57CB1CEB1B1000A458CF /* Assets.xcassets in Resources */,
 				0D9C57C91CEB1B1000A458CF /* Main.storyboard in Resources */,
 			);
@@ -155,10 +166,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		0D42FE451CF568D600D7AF2E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D42FE441CF568D600D7AF2E /* es */,
+				0D42FE461CF568F100D7AF2E /* en */,
+				0D42FE481CF56CEF00D7AF2E /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		0D9C57C71CEB1B1000A458CF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0D9C57C81CEB1B1000A458CF /* Base */,
+				0D42FE3C1CF551A100D7AF2E /* en */,
+				0D42FE3F1CF552B300D7AF2E /* es */,
+				0D42FE471CF56CEF00D7AF2E /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -167,6 +191,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0D9C57CD1CEB1B1000A458CF /* Base */,
+				0D42FE401CF552B300D7AF2E /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -211,7 +236,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -250,7 +275,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -262,6 +287,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WorldTrotter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Mia.WorldTrotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -273,6 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WorldTrotter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Mia.WorldTrotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";

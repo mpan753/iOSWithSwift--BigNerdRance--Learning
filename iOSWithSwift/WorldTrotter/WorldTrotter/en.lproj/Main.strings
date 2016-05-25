@@ -1,0 +1,24 @@
+
+/* Class = "UITextField"; placeholder = "Value"; ObjectID = "AaB-LD-T7b"; */
+"AaB-LD-T7b.placeholder" = "Value";
+
+/* Class = "UILabel"; text = "degrees Fahrenheit"; ObjectID = "aYE-tb-Lr3"; */
+"aYE-tb-Lr3.text" = "degrees Fahrenheit";
+
+/* Class = "UILabel"; text = "degrees Celsius"; ObjectID = "eLC-q9-2l9"; */
+"eLC-q9-2l9.text" = "degrees Celsius";
+
+/* Class = "UITabBarItem"; title = "BigNerdRanch"; ObjectID = "f4y-93-8aj"; */
+"f4y-93-8aj.title" = "BigNerdRanch";
+
+/* Class = "UITabBarItem"; title = "ConvertIcon"; ObjectID = "fsO-Ae-RzI"; */
+"fsO-Ae-RzI.title" = "ConvertIcon";
+
+/* Class = "UILabel"; text = "???"; ObjectID = "fyi-4l-KHE"; */
+"fyi-4l-KHE.text" = "???";
+
+/* Class = "UITabBarItem"; title = "Map"; ObjectID = "kju-cc-vRM"; */
+"kju-cc-vRM.title" = "Map";
+
+/* Class = "UILabel"; text = "is really"; ObjectID = "ppe-lU-AMb"; */
+"ppe-lU-AMb.text" = "is really";
