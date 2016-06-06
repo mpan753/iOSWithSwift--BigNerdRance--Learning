@@ -43,29 +43,39 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehb-sW-QJo">
-                                <rect key="frame" x="382" y="91" width="37.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehb-sW-QJo">
+                                <rect key="frame" x="282" y="61" width="37.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bew-f2-zYo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1uc-vd-R0J"/>
+                            <constraint firstItem="mSY-9t-e5O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9pR-XF-7gy"/>
+                            <constraint firstItem="Ehb-sW-QJo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GVp-l5-o0l"/>
                             <constraint firstItem="fvm-0g-mmj" firstAttribute="centerX" secondItem="bew-f2-zYo" secondAttribute="centerX" id="NN7-0G-C4X"/>
                             <constraint firstItem="xBJ-k2-S94" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rt0-Yi-4Hb"/>
                             <constraint firstItem="fvm-0g-mmj" firstAttribute="top" secondItem="bew-f2-zYo" secondAttribute="bottom" constant="8" id="TsO-kH-hv8"/>
+                            <constraint firstItem="Ehb-sW-QJo" firstAttribute="bottom" secondItem="xBJ-k2-S94" secondAttribute="bottom" id="aOn-c7-lhG"/>
                             <constraint firstItem="mSY-9t-e5O" firstAttribute="top" secondItem="xBJ-k2-S94" secondAttribute="bottom" constant="8" id="bCz-HK-UFK"/>
                             <constraint firstItem="bew-f2-zYo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nq1-2X-dbp"/>
                             <constraint firstItem="mSY-9t-e5O" firstAttribute="centerX" secondItem="xBJ-k2-S94" secondAttribute="centerX" id="vNg-zC-2dU"/>
                             <constraint firstItem="xBJ-k2-S94" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="zzG-EH-Psb"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="vNg-zC-2dU"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="answerLabel" destination="bew-f2-zYo" id="NX1-6S-x5e"/>
                         <outlet property="currentQuestionLabel" destination="xBJ-k2-S94" id="mK2-1f-Sa2"/>
+                        <outlet property="currentQuestionLabelCenterXConstraint" destination="Rt0-Yi-4Hb" id="DO4-F8-m7D"/>
                         <outlet property="nextQuestionLabel" destination="Ehb-sW-QJo" id="o8w-Sq-eIE"/>
+                        <outlet property="nextQuestionLabelCenterXConstraint" destination="GVp-l5-o0l" id="IHc-kf-ChJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
