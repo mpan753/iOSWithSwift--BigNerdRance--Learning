@@ -24,6 +24,11 @@ class ItemsViewController: UITableViewController {
         let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
+        
+//        tableView.rowHeight = 65
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 65
+        
         tableView.backgroundView = UIImageView(image: UIImage(named: "CocoaHeads"))
     }
 
@@ -52,8 +57,10 @@ class ItemsViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 //        let cell = UITableViewCell(style: .Value1, reuseIdentifier: "UITableViewCell")
-        let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath)
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: indexPath) as! ItemCell
+        
+        cell.updateLabels()
+        
         /*
          * Silver challenge for chapter 9
          var item = Item()
@@ -70,15 +77,19 @@ class ItemsViewController: UITableViewController {
         */
         
         if indexPath.row == tableView.numberOfRowsInSection(indexPath.section) - 1 {
-            cell.textLabel?.text = "No more items!"
-            cell.detailTextLabel?.text = ""
+            cell.nameLabel.text = "No more items!"
+            cell.serialNumberLabel.text = ""
+            cell.valueLabel.text = ""
             return cell
         }
         let item = itemStore.allItems[indexPath.row]
-        cell.textLabel?.font = UIFont.systemFontOfSize(20)
-        cell.textLabel?.text = item.name
-        cell.detailTextLabel?.font = UIFont.systemFontOfSize(20)
-        cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+//        cell.textLabel?.font = UIFont.systemFontOfSize(20)
+//        cell.textLabel?.text = item.name
+//        cell.detailTextLabel?.font = UIFont.systemFontOfSize(20)
+//        cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+        cell.nameLabel.text = item.name
+        cell.serialNumberLabel.text = item.serialNumber
+        cell.valueLabel.text = "$\(item.valueInDollars)"
 
         return cell
     }

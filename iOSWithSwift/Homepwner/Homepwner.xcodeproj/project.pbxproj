@@ -15,6 +15,7 @@
 		0D8073FD1D056480009DC314 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8073FC1D056480009DC314 /* ItemsViewController.swift */; };
 		0D8073FF1D0567C6009DC314 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8073FE1D0567C6009DC314 /* Item.swift */; };
 		0D8074011D056F46009DC314 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8074001D056F46009DC314 /* ItemStore.swift */; };
+		0DE008811D0697D000205AD9 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE008801D0697D000205AD9 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0D8073FC1D056480009DC314 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		0D8073FE1D0567C6009DC314 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		0D8074001D056F46009DC314 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		0DE008801D0697D000205AD9 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				0D8073EC1D056284009DC314 /* ViewController.swift */,
 				0D8073FC1D056480009DC314 /* ItemsViewController.swift */,
 				0D8073FE1D0567C6009DC314 /* Item.swift */,
+				0DE008801D0697D000205AD9 /* ItemCell.swift */,
 				0D8074001D056F46009DC314 /* ItemStore.swift */,
 				0D8073EE1D056284009DC314 /* Main.storyboard */,
 				0D8073F11D056284009DC314 /* Assets.xcassets */,
@@ -146,6 +149,7 @@
 			files = (
 				0D8073FF1D0567C6009DC314 /* Item.swift in Sources */,
 				0D8073ED1D056284009DC314 /* ViewController.swift in Sources */,
+				0DE008811D0697D000205AD9 /* ItemCell.swift in Sources */,
 				0D8073FD1D056480009DC314 /* ItemsViewController.swift in Sources */,
 				0D8074011D056F46009DC314 /* ItemStore.swift in Sources */,
 				0D8073EB1D056284009DC314 /* AppDelegate.swift in Sources */,
@@ -298,6 +302,7 @@
 				0D8073FB1D056284009DC314 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
