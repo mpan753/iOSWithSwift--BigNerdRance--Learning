@@ -23,6 +23,22 @@ class ItemStore {
         return newItem
     }
     
+    func removeItem(item: Item) {
+        if let index = allItems.indexOf(item) {
+            allItems.removeAtIndex(index)
+        }
+    }
+    
+    func moveItemAtIndex(fromIndex: Int, toIndex: Int) {
+        if fromIndex == toIndex {
+            return
+        }
+        
+        let movedItem = allItems[fromIndex]
+        allItems.removeAtIndex(fromIndex)
+        allItems.insert(movedItem, atIndex: toIndex)
+    }
+    
     func itemsMoreThan50() -> [Item] {
         var itemsMoreThan50 = [Item]()
         for item in allItems {
