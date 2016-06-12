@@ -12,6 +12,13 @@ class ItemsViewController: UITableViewController {
 
     var itemStore: ItemStore!
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        navigationItem.leftBarButtonItem = editButtonItem()
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .Add, target: self, action: #selector(addNewItem) )
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,6 +37,12 @@ class ItemsViewController: UITableViewController {
         tableView.estimatedRowHeight = 65
         
         tableView.backgroundView = UIImageView(image: UIImage(named: "CocoaHeads"))
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -151,6 +164,7 @@ class ItemsViewController: UITableViewController {
     override func tableView(tableView: UITableView, targetIndexPathForMoveFromRowAtIndexPath sourceIndexPath: NSIndexPath, toProposedIndexPath proposedDestinationIndexPath: NSIndexPath) -> NSIndexPath {
         if proposedDestinationIndexPath.row == tableView.numberOfRowsInSection(0) - 1 {
             return sourceIndexPath
+        
         }
         return proposedDestinationIndexPath
     }
@@ -179,6 +193,19 @@ class ItemsViewController: UITableViewController {
         } else {
             sender.setTitle("Done", forState: .Normal)
             setEditing(true, animated: true)
+        }
+    }
+    
+    // MARK: - Storyboard
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowItem" {
+            
+            if let row = tableView.indexPathForSelectedRow?.row {
+                let item = itemStore.allItems[row]
+                let detailViewController = segue.destinationViewController as! DetailViewController
+                detailViewController.item = item
+            }
         }
     }
     
