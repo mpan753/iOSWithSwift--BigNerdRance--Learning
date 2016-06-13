@@ -8,9 +8,15 @@
 
 import UIKit
 
-class DatePickerViewController: UIViewController, UITabBarDelegate {
+protocol DatePickerDelegate : class {
+    func dateDidUpdate(date: NSDate)
+}
+
+class DatePickerViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var datePicker: UIDatePicker!
+    
+    weak var delegate: DatePickerDelegate?
     
     var dateCreated: NSDate!
     
@@ -18,6 +24,13 @@ class DatePickerViewController: UIViewController, UITabBarDelegate {
         super.viewWillAppear(animated)
         
         datePicker.date = dateCreated
+        
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("newDate: \(datePicker.date.description)")
+        delegate?.dateDidUpdate(datePicker.date)
     }
 
 }

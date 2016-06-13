@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITextFieldDelegate {
+class DetailViewController: UIViewController, UITextFieldDelegate, DatePickerDelegate {
 
     @IBAction func backgroundTapped(sender: UITapGestureRecognizer) {
         view.endEditing(true)
@@ -77,8 +77,14 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         print("\(#function)")
         if segue.identifier == "ShowDatePicker" {
             let datePickerViewController = segue.destinationViewController as! DatePickerViewController
-
+            datePickerViewController.delegate = self
             datePickerViewController.dateCreated = self.item.dateCreated
         }
+    }
+    
+    func dateDidUpdate(date: NSDate) {
+        item.dateCreated = date
+//        dateLabel.text = dateFormatter.stringFromDate(date);
+        
     }
 }
