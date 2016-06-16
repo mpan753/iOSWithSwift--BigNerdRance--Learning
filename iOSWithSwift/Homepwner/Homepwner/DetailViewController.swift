@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITextFieldDelegate, DatePickerDelegate {
+class DetailViewController: UIViewController, UITextFieldDelegate, DatePickerDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBAction func backgroundTapped(sender: UITapGestureRecognizer) {
         view.endEditing(true)
@@ -17,12 +17,15 @@ class DetailViewController: UIViewController, UITextFieldDelegate, DatePickerDel
     @IBOutlet weak var serialNumberField: UITextField!
     @IBOutlet weak var valueField: UITextField!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet var imageView: UIImageView!
     
     var item: Item! {
         didSet {
             navigationItem.title = item.name
         }
     }
+    
+    var imageStore: ImageStore!
     
     let numberFormatter: NSNumberFormatter = {
         let formatter = NSNumberFormatter()
@@ -51,6 +54,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate, DatePickerDel
         
         valueField.text = numberFormatter.stringFromNumber(item.valueInDollars)
         dateLabel.text = dateFormatter.stringFromDate(item.dateCreated)
+        
+        let key = item.itemKey
+        
+        let imageToDisplay = imageStore.imageForKay(key)
+        imageView.image = imageToDisplay
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -86,5 +94,32 @@ class DetailViewController: UIViewController, UITextFieldDelegate, DatePickerDel
         item.dateCreated = date
 //        dateLabel.text = dateFormatter.stringFromDate(date);
         
+    }
+    
+    @IBAction func takePicture(sender: UIBarButtonItem) {
+        let imagePicker = UIImagePickerController()
+        
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            imagePicker.sourceType = .Camera
+            imagePicker.cameraOverlayView = UIView(frame: view.bounds)
+        } else {
+            imagePicker.sourceType = .PhotoLibrary
+        }
+        
+        imagePicker.allowsEditing = true
+        
+        imagePicker.delegate = self
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        imageStore.setImage(image, forKey: item.itemKey)
+        
+        imageView.image = image
+        
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }
